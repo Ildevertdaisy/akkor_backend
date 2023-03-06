@@ -19,4 +19,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - run: |
-        pytest test_displaying.py
+        python3 test_displaying.py
