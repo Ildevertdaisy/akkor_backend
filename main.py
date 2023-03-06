@@ -56,6 +56,10 @@ app.include_router(bookings_router, prefix="/bookings", tags=["bookings"])
 async def home():
     return {"message": "Welcome to the AKKOR Backend API!"}
 
+@app.get("/test")
+async def home():
+    return {"message": "test"}
+
 @app.get("/search", response_description="Search hotels by name")
 async def hotels_by_name(request: Request, name: str = Query(..., min_length=1)):
     print(name) 
